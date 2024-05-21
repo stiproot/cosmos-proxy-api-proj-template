@@ -1,0 +1,22 @@
+version: "2"
+services:
+
+  cosmos-proxy-api:
+    networks:
+      - cosmos-proxy-api
+    build: ./src/apis/store-api
+    ports:
+      - 8005:8001
+    environment:
+      - ENVIRONMENT=aks
+      - KEY_VAULT_URL=
+      - COSMOS_DATABASE_NAME=
+      - COSMOS_URL=
+      - STORE_QUERY_URL=
+      - AZURE_CLIENT_ID=
+      - AZURE_CLIENT_SECRET=
+      - AZURE_TENANT_ID=
+
+networks:
+  cosmos-proxy-api:
+    driver: bridge

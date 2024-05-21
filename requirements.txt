@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+requests
+environs
+azure.cosmos
+azure.identity
+azure.keyvault.secrets
